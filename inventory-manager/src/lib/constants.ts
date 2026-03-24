@@ -1,0 +1,8 @@
+export const LOW_STOCK_THRESHOLD = 10;
+
+export const ORDER_STATUS = {
+  PENDING: "PENDING",
+  PROCESSING: "PROCESSING",
+  FULFILLED: "FULFILLED",
+  CANCELLED: "CANCELLED",
+} as const;
