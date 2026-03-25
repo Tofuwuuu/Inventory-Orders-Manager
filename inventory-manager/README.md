@@ -34,3 +34,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+Running the app
+cd "E:\Projects\Inventory & Orders Manager\inventory-manager"
+node .\node_modules\next\dist\bin\next dev
+
+First-time / after schema changes (only when needed)
+If the DB is empty or you changed schema.prisma:
+
+cd "E:\Projects\Inventory & Orders Manager\inventory-manager"
+node .\node_modules\prisma\build\index.js generate
+node .\node_modules\prisma\build\index.js db push
+node .\node_modules\tsx\dist\cli.mjs prisma\seed.ts
